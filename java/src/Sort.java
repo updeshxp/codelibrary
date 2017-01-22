@@ -27,7 +27,7 @@ public class Sort {
 		qSort(a, low, j);
 		qSort(a, i, high);
 	}
-
+// O(n^2) complexity
 	public static void mergeSort(int[] a, int low, int high) {
 		if (high - low < 2)
 			return;
@@ -43,7 +43,7 @@ public class Sort {
 			}
 		}
 	}
-
+// O(n*log(n)) complexity
 	public static void mergeSort2(int[] a, int low, int high) {
 		int size = high - low;
 		if (size < 2)
@@ -142,7 +142,7 @@ public class Sort {
 			pushDown(a, 0, --n);
 		}
 	}
-
+	// O(n*log(n)) complexity
 	static void pushDown(int[] h, int pos, int size) {
 		while (true) {
 			int child = 2 * pos + 1;
@@ -193,7 +193,7 @@ public class Sort {
 			}
 		}
 	}
-
+// O(n^2) complexity
 	public static void countingSort(int[] a) {
 		int max = 0;
 		for (int x : a) {
@@ -213,7 +213,7 @@ public class Sort {
 		}
 		System.arraycopy(b, 0, a, 0, n);
 	}
-
+// O(n+k) complexity
 	public static void radixSort(int[] a) {
 		final int d = 8;
 		final int w = 32;
